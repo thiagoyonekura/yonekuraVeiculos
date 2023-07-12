@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastrar Veículo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/assets/css/navbar.css"/>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo"><a href="#">Yonekura Veículos</a></div>
+        <ul class="links">
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Pessoa</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarPessoa}">Cadastrar Pessoa</a>
+                    <a th:href="@{/listarPessoa}">Lista de Pessoas</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Veículo</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarVeiculo}">Cadastrar Veículo</a>
+                    <a th:href="@{/listarVeiculo}">Lista de Veículos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Transação</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarTransacao}">Cadastrar Transação</a>
+                    <a th:href="@{/listarTransacao}">Lista de Transações</a>
+                </div>
+            </li>
+        </ul>
+        <a href="http://localhost:8080/logout" class="action_btn">Logout</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="dropdown_menu">
+        <ul>
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Pessoa</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarPessoa}">Cadastrar Pessoa</a><br>
+                    <a th:href="@{/listarPessoa}">Lista de Pessoas</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Veículo</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarVeiculo}">Cadastrar Veículo</a><br>
+                    <a th:href="@{/listarVeiculo}">Lista de Veículos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Transação</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarTransacao}">Cadastrar Transação</a><br>
+                    <a th:href="@{/listarTransacao}">Lista de Transações</a>
+                </div>
+            </li>
+        </ul>
+        <a href="http://localhost:8080/logout" class="action_btn">Logout</a>
+    </div>
+</header>
+
+<div class="container-fluid" style="max-width: 1700px;">
+    <div class="row">
+        <h1 class="display-5 text-bg-dark text-center">Cadastrar Veículo</h1>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <form th:action="@{/cadastrarVeiculo}" th:object="${veiculo}" method="post">
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="renavam" class="form-label">Renavam:</label>
+                            <input type="text" class="form-control" id="renavam" name="renavam" th:field="*{renavam}"
+                                   required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="placa" class="form-label">Placa:</label>
+                            <input type="text" class="form-control" id="placa" name="placa" th:field="*{placa}"
+                                   required>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="ano" class="form-label">Ano:</label>
+                            <input type="number" class="form-control" id="ano" name="ano" th:field="*{ano}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="cor" class="form-label">Cor:</label>
+                            <input type="text" class="form-control" id="cor" name="cor" th:field="*{cor}" required>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="quilometragem" class="form-label">Quilometragem:</label>
+                            <input type="number" class="form-control" id="quilometragem" name="quilometragem"
+                                   th:field="*{quilometragem}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="fabricante" class="form-label">Fabricante:</label>
+                            <input type="text" class="form-control" id="fabricante" name="fabricante"
+                                   th:field="*{fabricante}">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="modelo" class="form-label">Modelo:</label>
+                            <input type="text" class="form-control" id="modelo" name="modelo" th:field="*{modelo}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="categoria" class="form-label">Categoria:</label>
+                            <input type="text" placeholder="Ex.: Carro de Passeio, Motocicleta, Veículo de Carga"
+                                   class="form-control" id="categoria" name="categoria" th:field="*{categoria}">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="tipo" class="form-label">Tipo:</label>
+                            <input type="text"
+                                   placeholder="Ex.: Sedã, Hatchback, SUV, Cupê, Conversível, Minivan, Caminhão"
+                                   class="form-control" id="tipo" name="tipo" th:field="*{tipo}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-10">
+                            <label for="descricao" class="form-label">Descrição:</label>
+                            <input type="text" class="form-control" id="descricao" name="descricao"
+                                   th:field="*{descricao}">
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label for="status" class="form-label">Status:</label>
+                            <select id="status" class="form-control" name="status" th:field="*{status}" required>
+                                <option value="DISPONIVEL">Disponível</option>
+                                <option value="VENDIDO">Vendido</option>
+                                <option value="EM_MANUTENCAO">Em Manutenção</option>
+                                <option value="RESERVADO">Reservado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/js/navbar.js"></script>
+</body>
+</html>

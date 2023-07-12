@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/assets/css/index.css"/>
+    <title>Yonekura Veículos</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo"><a href="#">Yonekura Veículos</a></div>
+        <ul class="links">
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Pessoa</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarPessoa}">Cadastrar Pessoa</a>
+                    <a th:href="@{/listarPessoa}">Lista de Pessoas</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Veículo</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarVeiculo}">Cadastrar Veículo</a>
+                    <a th:href="@{/listarVeiculo}">Lista de Veículos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Transação</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarTransacao}">Cadastrar Transação</a>
+                    <a th:href="@{/listarTransacao}">Lista de Transações</a>
+                </div>
+            </li>
+        </ul>
+        <a href="http://localhost:8080/logout" class="action_btn">Logout</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="dropdown_menu">
+        <ul>
+            <li><a href="http://localhost:8080/">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Pessoa</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarPessoa}">Cadastrar Pessoa</a><br>
+                    <a th:href="@{/listarPessoa}">Lista de Pessoas</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Veículo</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarVeiculo}">Cadastrar Veículo</a><br>
+                    <a th:href="@{/listarVeiculo}">Lista de Veículos</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Transação</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/cadastrarTransacao}">Cadastrar Transação</a><br>
+                    <a th:href="@{/listarTransacao}">Lista de Transações</a>
+                </div>
+            </li>
+        </ul>
+        <a href="http://localhost:8080/logout" class="action_btn">Logout</a>
+    </div>
+</header>
+
+<main>
+    <section id="home">
+        <h1> Bem-vindo à Yonekura Veículos!</h1>
+        <h2>Sistema de Controle de Veículos.</h2>
+    </section>
+</main>
+<script src="/assets/js/navbar.js"></script>
+</body>
+</html>

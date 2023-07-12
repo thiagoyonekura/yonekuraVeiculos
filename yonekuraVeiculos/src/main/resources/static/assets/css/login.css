@@ -1,0 +1,117 @@
+body {
+    background: #000 !important;
+}
+
+/*Título*/
+h1 {
+    color: gold;
+    font-weight: bold;
+}
+
+/*Borda com 1 pixel de espessura e cor dourada (gold).*/
+.card {
+    border: 1px solid gold;
+}
+
+/*Margem superior de 110 pixels, preenchimento interno de 100 pixels,
+largura máxima de 35 rem, e borda circular com raio de 50 pixels.*/
+.card-login {
+    margin-top: 110px;
+    padding: 100px;
+    max-width: 35rem;
+    border-radius: 50px;
+}
+
+/*Cor do texto como verde claro (#50c878), a fonte como 'Open Sans',
+ tamanho de 30 pixels, peso de 600 (negrito) e remove a borda inferior.*/
+.card-header {
+    color: #50c878;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600 !important;
+    border-bottom: 0;
+}
+
+/*Estilo dos elementos <span> que estão dentro de um elemento com a classe .input-group-prepend.*/
+.input-group-prepend span {
+    width: 50px;
+    background-color: #50c878;
+    color: #fff;
+    border-radius: 5px;
+    border: 0 !important;
+}
+
+/*Não haverá sombra ou contorno visível ao redor do elemento quando estiver em foco */
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+/*Largura 200px*/
+.login_btn {
+    width: 200px;
+}
+
+/*Altera o estilo dos elementos com a classe .login_btn quando o mouse está sobre eles.*/
+.login_btn:hover {
+    color: #fff;
+    background-color: #50c878;
+}
+
+/*Cor do texto como branco (#fff), tamanho de fonte como 20 pixels,
+ cor de fundo como preto (black), remove a imagem de fundo e define a cor da borda como dourado (gold).*/
+.btn-outline-danger {
+    color: #fff;
+    font-size: 20px;
+    background-color: black;
+    background-image: none;
+    border-color: gold;
+}
+
+/*Exibição como bloco, largura de 100%, altura calculada com base no tamanho da fonte,
+preenchimento interno de 0.375 rem 0.75 rem, tamanho de fonte de 1.2 rem, cor do texto como verde (#28a745),
+cor de fundo transparente, borda com 1 pixel de espessura e cor dourada (gold), borda circular com raio de 10 pixels
+e uma transição suave para a cor da borda.*/
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #28a745;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid gold;
+    border-radius: 10px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/*Exibição como flexbox, alinhamento vertical centralizado, preenchimento interno de 0.375 rem 0.75 rem,
+margem inferior de 20 pixels, tamanho de fonte de 1.5 rem, peso da fonte de 700 (negrito), cor do texto
+como cinza escuro (#495057), alinhamento do texto centralizado, sem quebra de linha, cor de fundo cinza
+claro (#e9ecef), e uma borda com 1 pixel de espessura na cor #ced4da.*/
+
+                                                                                                                                                                                                                                                                                                                                                          /*.erro: Define o estilo dos elementos com a classe .erro. Neste caso, define a cor do texto como dourado (gold) e uma margem inferior de 30 pixels.*/
+.input-group-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+}
+
+/*Mensagem de erro*/
+.erro {
+    color: gold;
+    margin-bottom: 30px;
+}
